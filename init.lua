@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -154,7 +154,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 20
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -184,11 +184,12 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
+vim.keymap.set('n', '<leader>w-', vim.cmd.split, { desc = 'Split horizontal' })
+vim.keymap.set('n', '<leader>w/', vim.cmd.vsplit, { desc = 'Split vertical' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -840,13 +841,13 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
+    'olimorris/onedarkpro.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'onedark'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
@@ -929,9 +930,9 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
@@ -939,8 +940,73 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  require 'custom.plugins.neogit',
+
+  require 'custom.config',
+
+  require 'custom.plugins.neotest',
+
+  require 'custom.plugins.go_nvim',
+
+  require 'custom.plugins.peek_nvim',
+
+  require 'custom.plugins.peepsight',
+
+  require 'custom.plugins.undotree',
+
+  require 'custom.plugins.yanky',
+
+  -- require 'custom.plugins.nvim_notify',
+
+  require 'custom.plugins.autosave',
+
+  require 'custom.plugins.treesitter',
+
+  require 'custom.plugins.refactoring',
+
+  require 'custom.plugins.nvim_cmp',
+
+  require 'custom.plugins.zoxide',
+
+  require 'custom.plugins.incline',
+
+  require 'custom.plugins.nvim_cusorline',
+
+  -- require 'custom.plugins.precognition',
+
+  require 'custom.plugins.hardtime',
+
+  require 'custom.plugins.harpoon',
+
+  -- require 'custom.plugins.codeium',
+
+  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+
+  require 'custom.plugins.noice',
+
+  -- require("custom.plugins.coc"),
+
+  require 'custom.plugins.trouble',
+
+  require 'custom.plugins.dashboard',
+
+  require 'custom.plugins.lightbulb',
+
+  require 'custom.plugins.lsp_signature',
+
+  require 'custom.plugins.chadtree',
+
+  require 'custom.plugins.copilot',
+
+  --	require("custom.plugins.omnisharp_vim"),
+
+  -- require("custom.plugins.comrade"),
+
+  -- coq breaks lsp
+
+  -- require 'custom.plugins.coq',  -- { import = 'custom.plugins' },
   --
+
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`

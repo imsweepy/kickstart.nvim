@@ -1,6 +1,6 @@
-return {
-  { 'nvim-lua/popup.nvim' },
-  { 'nvim-lua/plenary.nvim' },
-  { 'nvim-telescope/telescope.nvim' },
-  { 'jvgrootveld/telescope-zoxide' },
+vim.pack.add {
+  'https://github.com/nvim-lua/popup.nvim',
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/jvgrootveld/telescope-zoxide',
 }

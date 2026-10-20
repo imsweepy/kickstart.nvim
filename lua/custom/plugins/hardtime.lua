@@ -1,9 +1,6 @@
-return {
-  {
-    'm4xshen/hardtime.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      'nvim-lua/plenary.nvim',
-    },
-  },
+-- Installed only: `setup()` is not called, so hardtime stays inactive until it is
+vim.pack.add {
+  'https://github.com/MunifTanjim/nui.nvim',
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/m4xshen/hardtime.nvim',
 }

@@ -1,10 +1,3 @@
-return {
-  {
-    'b0o/incline.nvim',
-    config = function()
-      require('incline').setup()
-    end,
-    -- Optional: Lazy load Incline
-    event = 'VeryLazy',
-  },
-}
+vim.pack.add { 'https://github.com/b0o/incline.nvim' }
+
+require('incline').setup()

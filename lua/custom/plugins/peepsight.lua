@@ -1,22 +1,17 @@
-return {
-  {
-    'koenverburg/peepsight.nvim',
-    config = function()
-      local peepsight = require 'peepsight'
-      peepsight.setup {
-        -- go
-        'function_declaration',
-        'method_declaration',
-        'func_literal',
+vim.pack.add { 'https://github.com/koenverburg/peepsight.nvim' }
 
-        -- typescript
-        'class_declaration',
-        'method_definition',
-        'arrow_function',
-        'function_declaration',
-        'generator_function_declaration',
-      }
-      peepsight.enable()
-    end,
-  },
+local peepsight = require 'peepsight'
+peepsight.setup {
+  -- go
+  'function_declaration',
+  'method_declaration',
+  'func_literal',
+
+  -- typescript
+  'class_declaration',
+  'method_definition',
+  'arrow_function',
+  'function_declaration',
+  'generator_function_declaration',
 }
+peepsight.enable()

@@ -1,9 +1,3 @@
-return {
-  {
-    'andymass/vim-matchup',
-    -- config = function()
-    --   local matchup = require 'vim-matchup'
-    --   matchup.setup {}
-    -- end,
-  },
-}
+vim.pack.add { 'https://github.com/andymass/vim-matchup' }
+-- local matchup = require 'vim-matchup'
+-- matchup.setup {}

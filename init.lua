@@ -745,7 +745,7 @@ do
   ---@type table<string, vim.lsp.Config>
   local servers = {
     -- clangd = {},
-    -- gopls = {},
+    gopls = {},
     -- pyright = {},
     -- tsc = {},
     --
@@ -941,7 +941,8 @@ do
     fuzzy = { implementation = 'lua' },
 
     -- Shows a signature help window while you type arguments for a function
-    signature = { enabled = true },
+    -- Disabled because lsp_signature.nvim (lua/custom/plugins/lsp_signature.lua) provides it
+    signature = { enabled = false },
   }
 end
 

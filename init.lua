@@ -926,7 +926,7 @@ do
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets' },
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
 
     snippets = { preset = 'luasnip' },
@@ -1071,8 +1071,6 @@ do
 
   require 'custom.plugins.refactoring'
 
-  require 'custom.plugins.nvim_cmp'
-
   require 'custom.plugins.zoxide'
 
   require 'custom.plugins.incline'
@@ -1100,8 +1098,6 @@ do
   require 'custom.plugins.lsp_signature'
 
   require 'custom.plugins.chadtree'
-
-  require 'custom.plugins.copilot'
 
   -- require 'custom.plugins.omnisharp_vim'
 

@@ -27,37 +27,9 @@
       "src": "https://github.com/ms-jpq/chadtree",
       "version": "'chad'"
     },
-    "cmp-buffer": {
-      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
-      "src": "https://github.com/hrsh7th/cmp-buffer"
-    },
-    "cmp-cmdline": {
-      "rev": "d126061b624e0af6c3a556428712dd4d4194ec6d",
-      "src": "https://github.com/hrsh7th/cmp-cmdline"
-    },
-    "cmp-nvim-lsp": {
-      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
-      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
-    },
-    "cmp-nvim-lua": {
-      "rev": "e3a22cb071eb9d6508a156306b102c45cd2d573d",
-      "src": "https://github.com/hrsh7th/cmp-nvim-lua"
-    },
-    "cmp-path": {
-      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
-      "src": "https://github.com/hrsh7th/cmp-path"
-    },
-    "cmp_luasnip": {
-      "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
-      "src": "https://github.com/saadparwaiz1/cmp_luasnip"
-    },
     "conform.nvim": {
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
-    },
-    "copilot.lua": {
-      "rev": "3f1f8cc30783ca905224eadebaa6ddfd73c28828",
-      "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "dashboard-nvim": {
       "rev": "f787e3462c2ee2b6117b17c1aa4ddf66cb6f57fe",
@@ -155,10 +127,6 @@
     "nvim-autopairs": {
       "rev": "3172f40c16563db871a58f20d205c710ad782311",
       "src": "https://github.com/windwp/nvim-autopairs"
-    },
-    "nvim-cmp": {
-      "rev": "2ffe79f1f021def8dd1fcd81deb16f1bb0d989f3",
-      "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-cursorline": {
       "rev": "d4425a9ba73a66fca8a34fda9254eb8949b1784d",
